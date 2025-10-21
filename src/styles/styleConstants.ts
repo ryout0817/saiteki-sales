@@ -1,0 +1,1 @@
+export const INPUT_BASE_CLASS = 'bg-gray-50 border border-gray-300 rounded text-sm h-8 box-border';

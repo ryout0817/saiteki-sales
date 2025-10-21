@@ -1,0 +1,131 @@
+import React from 'react';
+import { useSearchForm } from './useSearchForm';
+import { INPUT_BASE_CLASS } from '../styles/styleConstants';
+
+export const SearchForm: React.FC = () => {
+  const {
+    freeWord,
+    setFreeWord,
+    language,
+    setLanguage,
+    minPrice,
+    setMinPrice,
+    maxPrice,
+    setMaxPrice,
+    location,
+    setLocation,
+    minAge,
+    setMinAge,
+    maxAge,
+    setMaxAge,
+    startDate,
+    setStartDate,
+    remote,
+    setRemote,
+    handleClearFilter,
+  } = useSearchForm();
+
+  return (
+    <>
+      <div className="bg-white w-64 h-[512px] flex flex-col m-4 p-4 shadow-lg">
+        <input
+          type="text"
+          value={freeWord}
+          placeholder="フリーワード"
+          onChange={(e) => setFreeWord(e.target.value)}
+          className={`w-full ${INPUT_BASE_CLASS}`}
+        />
+        <div>
+          <input
+            type="text"
+            placeholder="例)Java Ruby"
+            value={language}
+            onChange={(e) => setLanguage(e.target.value)}
+            className={`w-full ${INPUT_BASE_CLASS}`}
+          />
+        </div>
+        <div className="flex items-center gap-2">
+          <input
+            type="text"
+            placeholder="万円"
+            value={minPrice}
+            onChange={(e) => setMinPrice(e.target.value)}
+            className={`w-1/2 ${INPUT_BASE_CLASS}`}
+          />
+          <span>〜</span>
+          <input
+            type="text"
+            placeholder="万円"
+            value={maxPrice}
+            onChange={(e) => setMaxPrice(e.target.value)}
+            className={`w-1/2 ${INPUT_BASE_CLASS}`}
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="例)品川駅"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+            className={`w-full ${INPUT_BASE_CLASS}`}
+          />
+        </div>
+        <div className="flex items-center gap-2">
+          <input
+            type="text"
+            placeholder="歳"
+            value={minAge}
+            onChange={(e) => setMinAge(e.target.value)}
+            className={`w-1/2 ${INPUT_BASE_CLASS}`}
+          />
+          <span>〜</span>
+          <input
+            type="text"
+            placeholder="歳"
+            value={maxAge}
+            onChange={(e) => setMaxAge(e.target.value)}
+            className={`w-1/2 ${INPUT_BASE_CLASS}`}
+          />
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="年 / 月 / 日"
+            value={startDate}
+            onChange={(e) => setStartDate(e.target.value)}
+            className={`w-full ${INPUT_BASE_CLASS}`}
+          />
+        </div>
+        <div>
+          <select
+            value={remote}
+            onChange={(e) => setRemote(e.target.value)}
+            className={`w-full ${INPUT_BASE_CLASS}`}
+          >
+            <option value="">リモート可否を選択</option>
+            <option value="full">フルリモート</option>
+            <option value="basic">基本リモート</option>
+            <option value="partial">一部リモート</option>
+            <option value="none">常駐</option>
+          </select>
+        </div>
+        <div className="flex justify-between mt-6">
+          <button
+            type="button"
+            onClick={handleClearFilter}
+            className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300"
+          >
+            クリア
+          </button>
+          <button
+            type="submit"
+            className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700"
+          >
+            検索
+          </button>
+        </div>
+      </div>
+    </>
+  );
+
+};
