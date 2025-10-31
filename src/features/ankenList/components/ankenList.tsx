@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SearchForm } from '../../../components/SearchForm';
+import SearchForm from '../../searchForm/SearchForm.tsx';
 export const AnkenList = () => {
 
   return (
