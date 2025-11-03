@@ -1,0 +1,348 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+
+}
+
+ul {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.l-wrapper {
+  background-color: rgb(245, 245, 245);
+    min-width: 0px;
+    min-height: max(767px, 100%);
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    z-index: 2;
+    height: max-content;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    opacity: 1;
+}
+
+.l-header__inner {
+  padding: 0 16px;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+    overflow: visible;
+    justify-content: flex-start;
+    gap: 0px;
+    border-radius: 0px;
+    opacity: 1;
+    align-self: flex-start;
+    min-width: 1440px;
+    max-width: 1440px;
+    order: 1;
+    min-height: 40px;
+    max-height: 40px;
+    height: 40px;
+    flex-grow: 1;
+    width: 1440px;
+    margin: 0px;
+    z-index: 3;
+    align-items: center;
+}
+
+.c-logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font_default);
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.4;
+  border-radius: 0px;
+  opacity: 1;
+  cursor: pointer;
+  align-self: flex-start;
+  min-width: 80px;
+  }
+
+  .c-list {
+    margin-left: 192px;
+  }
+
+.c-nav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  }
+
+.c-nav__item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 150px;
+  padding-left: 10px;
+  color: rgba(9, 48, 98, 1);
+  font-weight: bold;
+}
+
+.c-nav__list p {
+  margin-left: 4px;
+}
+
+.c-search {
+  margin: 16px 0px 0px 16px;
+}
+
+.c-searchForm__itemInner {
+  background-color: rgb(255, 255, 255);
+    overflow: visible;
+    justify-content: flex-start;
+    border-radius: 0px;
+    opacity: 1;
+    align-self: flex-start;
+    min-width: 256px;
+    max-width: 256px;
+    order: 5;
+    min-height: 512px;
+    max-height: 512px;
+    width: 256px;
+    flex-grow: 1;
+    height: 512px;
+    z-index: 4;
+    padding: 16px 8px;
+}
+
+.c-searchForm__item {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  color: rgba(9, 48, 98, 1);
+  max-width: 240px;
+  order: 5;
+  min-height: 32px;
+  max-height: 32px;
+}
+
+.c-clearButton {
+    overflow: visible;
+    font-family: var(--font_default);
+    font-size: 12px;
+    font-weight: 400;
+      color: rgba(9, 23, 71, 1);
+    line-height: 1.4;
+    border-radius: 0px;
+    opacity: 1;
+    cursor: pointer;
+    align-self: flex-start;
+    order: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0px 0px 0px 120px;
+    z-index: 2;
+}
+
+.c-searchForm__label{
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(10, 10, 10);
+  line-height: 1.4;
+  min-width: 32px;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+/* ===== Pseudo-class targeted rules (grouped) ===== */
+/* Row 2: フリーワード */
+.c-searchForm__itemInner > div:nth-of-type(2) > input.c-searchForm {
+  background-color: rgb(248, 248, 248);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(9, 23, 71, 0.15);
+  border-radius: 5px;
+  font-family: var(--font_default);
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(9, 23, 71, 1);
+  padding: 6px 6px 6px 16px;
+  opacity: 1;
+  align-self: flex-start;
+  min-width: 240px;
+  max-width: 240px;
+  min-height: 32px;
+  max-height: 32px;
+  width: 240px;
+  height: 32px;
+  margin-left: 0;
+}
+
+/* Row 3 & 5: 言語・場所 共通入力 */
+.c-searchForm__itemInner > div:nth-of-type(3) input,
+.c-searchForm__itemInner > div:nth-of-type(5) input {
+  background-color: rgb(248, 248, 248);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(9, 23, 71, 0.15);
+  border-radius: 5px;
+  font-family: var(--font_default);
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(167,178,197);
+  padding: 6px;
+  opacity: 1;
+  height: 32px;
+  margin-left: 36px;
+}
+
+/* Row 4 & 6: 単価・年齢の2入力 共通スタイル */
+.c-searchForm__itemInner > div:nth-of-type(4) input,
+.c-searchForm__itemInner > div:nth-of-type(6) input {
+  background-color: rgb(248, 248, 248);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(9, 23, 71, 0.15);
+  border-radius: 5px;
+  font-family: var(--font_default);
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(9, 23, 71, 1);
+  padding: 6px 6px 6px 16px;
+  opacity: 1;
+  align-self: flex-start;
+  min-width: 66px;
+  max-width: 66px;
+  min-height: 32px;
+  max-height: 32px;
+  width: 168px;
+  flex-grow: 1;
+  height: 32px;
+  margin-left: 8px;
+  z-index: 4;
+}
+
+/* Row 4: 単価の1つ目だけ左36px */
+.c-searchForm__itemInner > div:nth-of-type(4) > input.c-searchForm:first-of-type {
+  margin-left: 36px;
+}
+
+/* Row 6: 年齢の1つ目だけ左36px */
+.c-searchForm__itemInner > div:nth-of-type(6) > input.c-searchForm:first-of-type {
+  margin-left:36px;
+}
+
+/* Row 7: 稼働開始 日付入力の個別調整 */
+.c-searchForm__itemInner > div:nth-of-type(7) > input.c-searchForm:first-of-type {
+  background-color: rgb(248, 248, 248);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(9, 23, 71, 0.15);
+  border-radius: 5px;
+  font-family: var(--font_default);
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(9, 23, 71, 1);
+  padding: 6px 6px 6px 16px;
+  opacity: 1;
+  align-self: flex-start;
+  min-width: 168px;
+  max-width: 168px;
+  min-height: 32px;
+  max-height: 32px;
+  width: 168px;
+  height: 32px;
+  margin-left: 8px;
+}
+
+/* 2つ並んだinputの2つ目にマージンを適用 */
+.c-searchForm__item input ~ input {
+  margin-left: 8px;
+}
+
+
+.c-searchForm__itemInner > div:nth-of-type(7) > label {
+    white-space: pre-wrap;
+    overflow: visible;
+    font-family: var(--font_default);
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(10, 10, 10);
+    line-height: 1.4;
+    border-radius: 0px;
+    opacity: 1;
+}
+
+/* リモート可否 select のスタイル */
+.c-searchForm__itemInner > select#remote {
+  align-self: flex-start;
+  min-width: 240px;
+  max-width: 240px;
+  min-height: 48px;
+  max-height: 48px;
+  height: 48px;
+  width: 240px;
+  display: block;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(9, 23, 71, 0.15);
+  border-image: initial;
+  background-color: rgb(248, 248, 248);
+  color: rgba(9, 23, 71, 0.36);
+  font-family: var(--font_default);
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 6px;
+  opacity: 1;
+}
+
+.c-searchForm__line {
+    margin-left:8px;
+}
+
+/* ===== Right-edge alignment to match Freeword (240px total) ===== */
+/* Rows with label: set width by subtracting left margin 36px */
+.c-searchForm__item label + input {
+  width: calc(240px - 36px);
+}
+
+/* Rows with first input without label (Freeword): keep full 240px, no extra left margin */
+.c-searchForm__item > input:first-child {
+  width: 240px;
+}
+
+/* Second input in same row (e.g., 単価2つ目/年齢2つ目): subtract left margin 8px */
+.c-searchForm__item input ~ input {
+  width: calc(240px - 8px);
+}
+
+/* Row 4 (単価): enforce widths explicitly */
+.c-searchForm__itemInner > div:nth-of-type(4) > input:first-of-type {
+  width: calc(240px - 36px);
+}
+.c-searchForm__itemInner > div:nth-of-type(4) > input:nth-of-type(2) {
+  width: calc(240px - 8px);
+}
+
+/* Row 6 (年齢): enforce widths explicitly */
+.c-searchForm__itemInner > div:nth-of-type(6) > input:first-of-type {
+  width: calc(240px - 36px);
+}
+.c-searchForm__itemInner > div:nth-of-type(6) > input:nth-of-type(2) {
+  width: calc(240px - 8px);
+}
+
+/* Row 7 (稼働開始): label + input alignment */
+.c-searchForm__itemInner > div:nth-of-type(7) > input.c-searchForm:first-of-type {
+  width: calc(240px - 36px);
+}

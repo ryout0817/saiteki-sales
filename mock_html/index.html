@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Mockup</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <div class="l-wrapper">
+    <div class="l-header">
+      <div class="l-header__inner">
+        <p class="c-logo">Saiteki</p>
+        <nav class="c-list">
+          <ul class="c-nav__list">
+            <li class="c-nav__item"><i class="fa-regular fa-file-lines"></i><p>案件一覧</p></li>
+            <li class="c-nav__item"><i class="fa-regular fa-user"></i><p>要因一覧</p></li>
+            <li class="c-nav__item"><i class="fa-regular fa-star"></i><p>お気に入り一覧</p></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <main>
+      <div class="c-search">
+        <div class="c-searchForm__itemInner">
+          <div class="c-clearButton" id="clearBtn"><p>フィルターをクリア</p></div>
+
+          <div class="c-searchForm__item">
+            <input type="text" class="c-searchForm" id="keyword" name="keyword" placeholder="フリーワード" />
+          </div>
+
+          <div class="c-searchForm__item">
+            <label class="c-searchForm__label">言語</label>
+            <input type="text" class="c-searchForm" id="language" name="language" placeholder="例)Java Ruby" />
+          </div>
+
+          <div class="c-searchForm__item">
+            <label class="c-searchForm__label">単価</label>
+            <input type="number" class="c-searchForm" name="price_min" placeholder="万円" />
+            <p class="c-searchForm__line">〜</p>
+            <input type="number" class="c-searchForm" name="price_max" placeholder="万円" />
+          </div>
+
+          <div class="c-searchForm__item">
+            <label class="c-searchForm__label">場所</label>
+            <input type="text" class="c-searchForm" id="location" name="location" placeholder="（例：品川駅）" />
+          </div>
+
+          <div class="c-searchForm__item">
+            <label class="c-searchForm__label">年齢</label>
+            <input type="number" class="c-searchForm" name="age_min" placeholder="歳" />
+            <p class="c-searchForm__line">〜</p>
+            <input type="number" name="age_max" placeholder="歳" />
+          </div>
+
+          <div class="c-searchForm__item">
+            <label class="c-searchForm__label">稼働開始</label>
+            <input type="text" class="c-searchForm" name="start_date" placeholder="年/月/日" />
+          </div>
+
+          <div class="c-searchForm__item">
+            <label class="c-searchForm__label">リモート可否</label>
+          </div>
+          <select id="remote" name="remote">
+            <option value="">選択してください</option>
+            <option value="yes">可</option>
+            <option value="no">不可</option>
+          </select>
+        </div>
+      </div>
+      <div class="l-rigjt__item"></div>
+    </main>
+  </div>
+  <script>
+    document.getElementById('clearBtn')?.addEventListener('click', function () {
+      const fields = ['keyword','language','price_min','price_max','location','age_min','age_max','start_date'];
+      fields.forEach(function(id){
+        const el = document.querySelector('[name="'+id+'"]');
+        if (el) el.value = '';
+      });
+      const remote = document.getElementById('remote');
+      if (remote) remote.value = '';
+    });
+  </script>
+</body>
+</html>

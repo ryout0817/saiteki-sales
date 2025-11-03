@@ -1,13 +1,10 @@
 import React from 'react';
 import './App.css'; // 必要であれば残します
-import { Layout } from './features/ankenLayout/Layout';
-import { AnkenList } from './features/ankenList/components/ankenList';
+import TopPage from './pages/TopPage';
 
 function App() {
   return (
-    <Layout>
-      <AnkenList />
-    </Layout>
+    <TopPage />
   );
 }
 
